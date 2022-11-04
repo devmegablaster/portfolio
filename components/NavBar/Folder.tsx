@@ -9,7 +9,7 @@ function Folder({
 }: {
   folderName: string;
   gitStatus: number;
-  files: string[];
+  files: any;
 }) {
   const [open, setOpen] = React.useState(false);
 
@@ -23,7 +23,7 @@ function Folder({
           setOpen(!open);
         }}
       >
-        <div className="flex w-full space-x-2 items-center">
+        <div className="flex w-full space-x-[5px] items-center">
           <p className="text-white">
             <VscChevronRight
               style={{ transform: `rotate(${open ? 90 : 0}deg)` }}
@@ -35,11 +35,11 @@ function Folder({
 
         <p>U</p>
       </div>
-      {files.map((file) => (
-        <div className={`${open ? "flex" : "hidden"} w-10/12 ml-auto flex-col`}>
-          <File fileName={file} gitStatus={0} />
-        </div>
-      ))}
+      <div className={`${open ? "flex" : "hidden"} flex-col ml-auto w-10/12`}>
+        {files.map((file) => {
+          return file;
+        })}
+      </div>
     </>
   );
 }

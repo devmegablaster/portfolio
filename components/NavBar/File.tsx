@@ -14,7 +14,7 @@ function File({
         gitStatus == 1 ? "text-green-300" : "text-red-400"
       } text-sm`}
     >
-      <div className="flex w-full space-x-2 items-center">
+      <div className="flex w-full space-x-[5px] items-center">
         <VscFileCode className="text-gray-300" />
         <p>{fileName}</p>
       </div>
