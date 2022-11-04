@@ -36,7 +36,7 @@ function Folder({
         <p>U</p>
       </div>
       <div className={`${open ? "flex" : "hidden"} flex-col ml-auto w-10/12`}>
-        {files.map((file) => {
+        {files.map((file: File) => {
           return file;
         })}
       </div>
